@@ -37,6 +37,7 @@ python3 ~/.claude/skills/lovstudio-image-creator/gen_image.py "PROMPT" [-o outpu
 
 - Generates image directly via Gemini 3 Pro (through ZenMux)
 - Requires `ZENMUX_API_KEY` environment variable
+- First run auto-installs `google-genai` and `Pillow` via `pip --user` (no manual setup)
 - Display result with `Read` tool after generation
 
 ## Mechanism 2: Code-Based Rendering

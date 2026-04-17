@@ -6,6 +6,25 @@ import time
 import io
 import subprocess
 import shutil
+import importlib
+import importlib.util
+
+def _ensure_deps():
+    required = [("PIL", "Pillow"), ("google.genai", "google-genai")]
+    missing = [pkg for mod, pkg in required if importlib.util.find_spec(mod) is None]
+    if not missing:
+        return
+    print(f"Installing missing dependencies: {', '.join(missing)}...", file=sys.stderr)
+    cmd = [sys.executable, "-m", "pip", "install", "--user", "--quiet", *missing]
+    try:
+        subprocess.run(cmd, check=True)
+    except subprocess.CalledProcessError:
+        print("Retrying with --break-system-packages...", file=sys.stderr)
+        subprocess.run([*cmd, "--break-system-packages"], check=True)
+    importlib.invalidate_caches()
+
+_ensure_deps()
+
 from PIL import Image
 from google import genai
 from google.genai import types
