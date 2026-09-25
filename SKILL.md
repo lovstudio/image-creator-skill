@@ -12,7 +12,7 @@ depends_on:
 - lov-branding-consistency
 metadata:
   author: contributors
-  version: 0.3.1
+  version: 0.3.3
   tags:
   - image-generation
   - design
@@ -22,7 +22,7 @@ metadata:
   card_standard: lovstudio/skill-card/v1
 ---
 
-# 图像创作
+# 造图师 · Image Maker
 
 按用途生成图像、制作可编辑图文布局或整理图像提示词。
 

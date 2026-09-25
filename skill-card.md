@@ -1,4 +1,4 @@
-# 图像创作 Skill Card
+# 造图师 · Image Maker · Skill Card
 
 ## Description
 
@@ -38,7 +38,7 @@ MIT
 
 ## Skill Version
 
-0.3.1
+0.3.3
 
 ## Ethical Considerations
 
