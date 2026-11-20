@@ -1,13 +1,13 @@
 # 造图师 · Image Maker
 
-![Version](https://img.shields.io/badge/version-0.3.3-CC785C)
+![Version](https://img.shields.io/badge/version-0.3.4-CC785C)
 
 按用途生成图像、制作可编辑图文布局或整理图像提示词。
 
 ## 安装
 
 ```bash
-npx skills add lov-image-creator -g -y
+npx lovstudio skills add image-creator -g -y
 ```
 
 ## 使用
